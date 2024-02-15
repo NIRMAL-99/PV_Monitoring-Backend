@@ -70,7 +70,7 @@ app.get("/plants", async (req, res) => {
 
 app.get("/invertersdata", async (req, res) => {
   try {
-    const _res = await getInverterListByPlantId("682346ba-d594-4bd5-a734-433bd27dbc53");
+    const _res = await getInverterListByPlantId("plantid");
     res.json({ inverters: _res.data.data });
   } catch (error) {
     console.log(error);
